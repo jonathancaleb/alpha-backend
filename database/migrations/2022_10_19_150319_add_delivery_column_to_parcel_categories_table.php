@@ -13,7 +13,7 @@ class AddDeliveryColumnToParcelCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::table('parcel_categories', function (Blueprint $table) {
+        Schema::create('parcel_categories', function (Blueprint $table) {
             $table->double('parcel_per_km_shipping_charge', 23, 2)->nullable();
             $table->double('parcel_minimum_shipping_charge', 23, 2)->nullable();
         });

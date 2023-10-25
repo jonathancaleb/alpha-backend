@@ -13,7 +13,7 @@ class AddFoodVariationsColumnToItemsTable extends Migration
      */
     public function up()
     {
-        Schema::table('items', function (Blueprint $table) {
+        Schema::create('items', function (Blueprint $table) {
             $table->text('food_variations')->nullable();
         });
     }

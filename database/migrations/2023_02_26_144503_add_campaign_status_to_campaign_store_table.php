@@ -13,7 +13,7 @@ class AddCampaignStatusToCampaignStoreTable extends Migration
      */
     public function up()
     {
-        Schema::table('campaign_store', function (Blueprint $table) {
+        Schema::create('campaign_store', function (Blueprint $table) {
             $table->string('campaign_status',10)->default('pending')->nullable();
         });
     }

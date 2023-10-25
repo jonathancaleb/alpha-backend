@@ -13,7 +13,7 @@ class AddColumnToModulesTable extends Migration
      */
     public function up()
     {
-        Schema::table('modules', function (Blueprint $table) {
+        Schema::create('modules', function (Blueprint $table) {
             $table->string('icon',191)->nullable();
             $table->integer('theme_id')->default(1);
             $table->text('description')->nullable();

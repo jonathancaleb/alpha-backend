@@ -13,8 +13,8 @@ class CreateConversationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('conversations', function (Blueprint $table) {
-            $table->id();
+        Schema::table('conversations', function (Blueprint $table) {
+            //$table->id();
             $table->foreignId('sender_id');
             $table->string('sender_type');
             $table->foreignId('receiver_id');
